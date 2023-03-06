@@ -11,17 +11,26 @@ function checkOperator() {
   } else {
     console.log('Please insert a valid input of operator!');
   }
-  reset();
+  resetOperatorSelection();
 }
 
 checkOperator();
-// 4. Create a function to perform our calcutions based on the operator selected by the user
-//   a. Ask user for first number or input
-//   b. Ask user for second number or input
-//   c. Perform the operation selected on the first and second numbers inputed
 
-// 5. Create a reset function to clear input and run checkOperator function again
-function reset() {
+
+
+// 4. Create a function to perform our calcutions based on the operator selected by the user
+function performOperation() {
+//   a. Ask user for first number or input
+  let firstInput = prompt('Please insert your first number: ');
+
+  //   b. Ask user for second number or input
+  let secondInput = prompt('Please insert your second number: ');
+}
+
+
+//   c. Perform the operation selected on the first and second numbers inputed
+// 5. Create a function to reset the input of opeartor selection and restart the process when there is a wrong selection of opeartor
+function resetOperatorSelection() {
   operator = prompt('Select an operator, a. Addition, b. Subtraction, c. Division, d. Multiplication: ');
   checkOperator();
 }
