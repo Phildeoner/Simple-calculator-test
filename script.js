@@ -11,7 +11,7 @@ function checkOperator() {
   } else {
     console.log('Please insert a valid input of operator!');
   }
-  checkOperator();
+  reset();
 }
 
 checkOperator();
@@ -19,3 +19,9 @@ checkOperator();
 //   a. Ask user for first number or input
 //   b. Ask user for second number or input
 //   c. Perform the operation selected on the first and second numbers inputed
+
+// 5. Create a reset function to clear input and run checkOperator function again
+function reset() {
+  operator = prompt('Select an operator, a. Addition, b. Subtraction, c. Division, d. Multiplication: ');
+  checkOperator();
+}
